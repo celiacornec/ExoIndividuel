@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Info Album</title>
 </head>
 <body>
+
+<h3>{{album}}</h3>
+<h4>By {{artist}}</h4>
+
+<h2>Liste des titres :</h2>
+{% for track in tracks %}
+    <p>{{track}} : </p>
+    {% for unit_price in unit_prices %}
+        <p>{{unit_price}}</p>
+    {% endfor %}
+{% endfor %}
 
 </body>
 </html>
