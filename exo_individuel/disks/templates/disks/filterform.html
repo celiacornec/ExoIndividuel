@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire filtre</title>
+</head>
+<body>
+
+{% for album in albums_filtered %}
+    <a href="{% url 'infoalbum' album.id %}">
+        <p>{{album}}</p>
+    </a>
+{% endfor %}
+
+</body>
+</html>
