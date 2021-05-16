@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Album, Track
+from .models import Album, Track, Artist
 
 # Create your views here.
 
@@ -9,9 +9,8 @@ def accueil(request):
 
 def infoalbum(request, album):
     tracks = Track.objects.filter(album=album)
-    album = album
-    unit_prices = []
-    for track in tracks:
-        unit_prices = unit_prices + track.unit_price
-    artist = album.artist
+   # unit_prices = []
+   # for track in tracks:
+ #       unit_prices = unit_prices + track.unit_price
+    artist = Artist.objects.get(album=album)
     return render(request, 'disks/infoalbum.html', locals())

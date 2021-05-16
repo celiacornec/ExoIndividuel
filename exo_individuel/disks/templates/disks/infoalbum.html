@@ -6,16 +6,17 @@
 </head>
 <body>
 
-<h3>{{album}}</h3>
-<h4>By {{artist}}</h4>
+<h1>{{album}}</h1>
+<h2>By {{artist}}</h2>
+<br>
 
-<h2>Liste des titres :</h2>
+<h3>Liste des titres :</h3>
 {% for track in tracks %}
-    <p>{{track}} : </p>
-    {% for unit_price in unit_prices %}
-        <p>{{unit_price}}</p>
-    {% endfor %}
+    <p>{{track.name}} : {{track.unitPrice}}$</p>
 {% endfor %}
+<br>
+
+<button type="button" onclick="{% url 'accueil' %}">Retour à la page d'accueil</button>
 
 </body>
 </html>
