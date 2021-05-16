@@ -7,9 +7,9 @@
 <body>
 
 <h1>Sélectionnez l'album de votre choix</h1>
-{% for album in albums %}
-    <a href="{% url 'infoalbum' album.id %}">
-        <p>{{album.title}}</p>
+{% for allbum in albums %}
+    <a href="{% url 'infoalbum' album %}">
+        <p>{{album}}</p>
     </a>
 {% endfor %}
 
