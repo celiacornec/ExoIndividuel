@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('accueil', views.accueil, name='accueil'),
-    path('infoalbum/<int:album>', views.infoalbum, name='infoalbum'),
-    path('accueil/', views.filterform, name='filterform')
+    path('infoalbum/<int:album_id>', views.infoalbum, name='infoalbum'),
+    #path('accueil/', views.filterform, name='filterform')
 ]

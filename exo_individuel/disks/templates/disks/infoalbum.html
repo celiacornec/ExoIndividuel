@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>{{album.title}}</h1>
+<h1>{{album}}</h1>
 <h2>By {{artist}}</h2>
 <br>
 
@@ -16,7 +16,11 @@
 {% endfor %}
 <br>
 
-<button type="button" onclick="location.href='http://127.0.0.1:8000/disks/accueil'">Retour à la page d'accueil</button>
+<a href="{% url 'accueil' %}">
+    <button>Click me</button>
+</a>
+
+<!-- <button type="button" onclick="location.href='http://127.0.0.1:8000/disks/accueil'">Retour à la page d'accueil</button> /-->
 
 </body>
 </html>
