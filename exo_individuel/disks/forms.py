@@ -4,5 +4,5 @@ from django.shortcuts import render
 from .models import Album, Track, Artist
 
 class FilterForm(forms.Form):
-    recherche = forms.CharField(max_length=200, required=False)
+    recherche = forms.CharField(max_length=200, required=False,label='Recherche')
 
